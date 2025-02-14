@@ -1,3 +1,11 @@
+<h1 align="left">
+  <br>
+  <a href="https://projectarcade.ru/"><img src="https://raw.githubusercontent.com/PRO100BYTE/ProjectArcade/master/resources/images/pa-github.png" alt="ProjectArcade" width="500"></a>
+</h1>
+
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)   [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)   [![Based on batocera.linux](https://img.shields.io/badge/batocera.linux%20-%20Based%20on?logoColor=brightgreen&label=Based%20on&link=https%3A%2F%2Fgithub.com%2Fbatocera-linux)](https://github.com/batocera-linux)
+   [![itch.io](https://img.shields.io/badge/Itch.io-FA5C5C?logo=itchdotio&logoColor=white)](https://thedayg0ne.itch.io/projectarcade-os)   [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)   [![GitHub release](https://img.shields.io/github/v/release/PRO100BYTE/ProjectArcade-OS?display_name=release)](https://github.com/PRO100BYTE/ProjectArcade/releases)   [![Download ProjectArcade](https://img.shields.io/sourceforge/dm/projectarcade.svg)](https://sourceforge.net/projects/projectarcade-os/files/latest/download)
+
 ## :video_game::penguin: ProjectArcade OS :video_game::penguin:
 ProjectArcade OS is an open-source and completely free retro-gaming distribution based on batocera.linux core that can be copied to a USB stick or an SD card with the aim of turning any computer into a gaming console during a game or permanently. ProjectArcade OS does not require any modification on your computer. It supports [many emulators and game engines (more info - on batocera's website)](https://www.batocera.org/compatibility.php) out of the box. 
 
