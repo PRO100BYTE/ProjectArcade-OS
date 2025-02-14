@@ -36,7 +36,7 @@ done
 # directories to force directories exists
 # files are linked
 #
-# ONLY NEW DIRECTORIES ARE UPDATED WHEN batocera.linux IS UPDATED
+# ONLY NEW DIRECTORIES ARE UPDATED WHEN ProjectArcade OS IS UPDATED
 #
 # the user can't delete any directory, otherwise, it will recreate it, with link inside
 # the user can delete links and add its own files
