@@ -7,9 +7,9 @@ index 3262444..3e37133 100644
  #ifndef GRUB_MACHINE_EFI
    /* Hello.  */
 -  grub_setcolorstate (GRUB_TERM_COLOR_HIGHLIGHT);
--  grub_printf ("Welcome to GRUB!\n\n");
+-  grub_printf ("ProjectArcade OS | Welcome to GRUB!\n\n");
 +  //grub_setcolorstate (GRUB_TERM_COLOR_HIGHLIGHT);
-+  //grub_printf ("Welcome to GRUB!\n\n");
++  //grub_printf ("ProjectArcade OS | Welcome to GRUB!\n\n");
    grub_setcolorstate (GRUB_TERM_COLOR_STANDARD);
  #endif
  

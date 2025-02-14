@@ -1,4 +1,4 @@
-# Add BATOCERA logo and some alias, sourcing of $HOME/.bashrc can be added to $HOME/.profile
+# Add ProjectArcade logo and some alias, sourcing of $HOME/.bashrc can be added to $HOME/.profile
 echo '
 ______          _           _    ___                    _      
 | ___ \        (_)         | |  / _ \                  | |     
