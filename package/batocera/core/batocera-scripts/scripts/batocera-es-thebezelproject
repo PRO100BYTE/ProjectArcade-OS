@@ -21,7 +21,7 @@
 #
 
 readonly VERSION="20220606"
-readonly TITLE="the BezelProject for BATOCERA"
+readonly TITLE="the BezelProject for ProjectArcade OS"
 readonly LOGS_DIR="/userdata/system/logs"
 readonly DECORATION_DIR="/userdata/decorations"
 readonly ROMS_DIR="/userdata/roms"

@@ -3,4 +3,4 @@ config BR2_PACKAGE_BATOCERA_DESKTOPAPPS
     depends on BR2_PACKAGE_XORG7
     depends on BR2_PACKAGE_PCMANFM # file manager
     help
-      Batocera desktop applications
+      ProjectArcade desktop applications

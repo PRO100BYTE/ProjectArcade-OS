@@ -5,13 +5,13 @@ config BR2_PACKAGE_BATOCERA_SPLASH
     select BR2_PACKAGE_LIBASS        if BR2_PACKAGE_BATOCERA_SPLASH_MPV
 
     help
-      Batocera splash
+      ProjectArcade OS splash
 
 choice
         prompt "splash type"
         default BR2_PACKAGE_BATOCERA_SPLASH_IMAGE
         help
-          Select batocera.linux splash type
+          Select ProjectArcade splash type
 
 config BR2_PACKAGE_BATOCERA_SPLASH_IMAGE
         bool "image"

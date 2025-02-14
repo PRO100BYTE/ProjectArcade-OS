@@ -8,16 +8,16 @@
   <DefaultAppDirs/>
 
   <Menu>
-    <Name>batocera.linux</Name>
-    <Directory>batocera.directory</Directory>
+    <Name>ProjectArcade</Name>
+    <Directory>ProjectArcade.directory</Directory>
     <DefaultLayout inline="true" inline_limit="60" inline_header="false">
       <Merge type="menus"/>
       <Merge type="files"/>
     </DefaultLayout>
     <Menu>
-      <Name>batocera.linux</Name>
+      <Name>ProjectArcade</Name>
       <Include>
-	<Category>batocera.linux</Category>
+	<Category>ProjectArcade</Category>
       </Include>
     </Menu>
   </Menu>

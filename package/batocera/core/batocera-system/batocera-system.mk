@@ -1,12 +1,12 @@
 ################################################################################
 #
-# batocera.linux System
+# ProjectArcade OS
 #
 ################################################################################
 
 BATOCERA_SYSTEM_SOURCE=
 
-BATOCERA_SYSTEM_VERSION = 42-dev
+BATOCERA_SYSTEM_VERSION = 42-pa_dev
 BATOCERA_SYSTEM_DATE_TIME = $(shell date "+%Y/%m/%d %H:%M")
 BATOCERA_SYSTEM_DATE = $(shell date "+%Y/%m/%d")
 BATOCERA_SYSTEM_DEPENDENCIES = tzdata

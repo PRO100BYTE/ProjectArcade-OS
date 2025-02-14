@@ -108,7 +108,7 @@ config BR2_PACKAGE_BATOCERA_CORES_STILL_COMMERCIALIZED
 
 ##########################################
 config BR2_PACKAGE_BATOCERA_MUSIC_SUPPORT
-	bool "batocera.linux music formats support"
+	bool "ProjectArcade OS music formats support"
 
 	# MIDI
 	select BR2_PACKAGE_FLUIDSYNTH
@@ -129,7 +129,7 @@ config BR2_PACKAGE_BATOCERA_MUSIC_SUPPORT
 	  Music support packages (MIDI, MOD, S3M, XM, ....)
 
 config BR2_PACKAGE_BATOCERA_VULKAN
-	bool "batocera.linux Vulkan support"
+	bool "ProjectArcade OS Vulkan support"
 
 	# Vulkan headers, loaders, SPIR-V, glsLang
 	select BR2_PACKAGE_VULKAN_TOOLS
@@ -145,10 +145,10 @@ config BR2_PACKAGE_BATOCERA_VULKAN
 	select BR2_PACKAGE_MESA3D_VULKAN_DRIVER_FREEDRENO	if BR2_PACKAGE_BATOCERA_FREEDRENO_MESA3D
 
 	help
-	  Vulkan support for batocera.linux
+	  Vulkan support for ProjectArcade OS
 
 config BR2_PACKAGE_BATOCERA_SYSTEM
-	bool "batocera.linux minimal"
+	bool "ProjectArcade OS minimal"
 
 	# RISC-V support needs a hack here to declare as RV64GC, needed for Rust
 	select BR2_RISCV_ISA_RVC		if BR2_PACKAGE_BATOCERA_TARGET_JH7110
@@ -483,7 +483,7 @@ config BR2_PACKAGE_BATOCERA_SYSTEM
 	select BR2_PACKAGE_BRCM_PATCHRAM_PLUS    if BR2_PACKAGE_BATOCERA_TARGET_T527
 
 	help
-	  Install the batocera.linux system files
+	  Install the ProjectArcade OS system files
 
 config BR2_PACKAGE_BATOCERA_DEV
 	bool "add dev options"
@@ -491,7 +491,7 @@ config BR2_PACKAGE_BATOCERA_DEV
 	select BR2_PACKAGE_X11VNC	if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 	help
-	  Install dev packages for batocera.linux
+	  Install dev packages for ProjectArcade OS
 
 config BR2_PACKAGE_BATOCERA_DEBUG
 	bool "add debug options"
@@ -506,7 +506,7 @@ config BR2_PACKAGE_BATOCERA_DEBUG
 	select BR2_PACKAGE_VULKAN_SAMPLES	if BR2_PACKAGE_BATOCERA_VULKAN
 
 	help
-	  Install debug packages for batocera.linux
+	  Install debug packages for ProjectArcade OS
 
 config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
 	bool "target images definitions"
@@ -551,10 +551,10 @@ config BR2_TARGET_BATOCERA_IMAGES_DEFINITIONS
 	default "allwinner/t527/orangepi-4a"    if BR2_PACKAGE_BATOCERA_TARGET_T527
 
 	choice
-	prompt "batocera.linux target"
+	prompt "ProjectArcade OS target"
 	default BR2_PACKAGE_BATOCERA_TARGET_BCM2836
 	help
-	  Select batocera.linux target hardware
+	  Select ProjectArcade OS target hardware
 
 # Raspberry
 # ---------------------------------------
@@ -666,13 +666,13 @@ config BR2_PACKAGE_BATOCERA_TARGET_JH7110
 endchoice
 
 config BR2_PACKAGE_BATOCERA_EXTRAS
-	bool "batocera.linux tools packages selection"
+	bool "ProjectArcade OS tools packages selection"
 
 	help
 	  Tools to extends the batocera system (but not required)
 
 config BR2_PACKAGE_BATOCERA_TOOLS
-	bool "batocera.linux system tools packages selection"
+	bool "ProjectArcade OS system tools packages selection"
 
 	select BR2_PACKAGE_JSTEST2				# joysticks tester
 	select BR2_PACKAGE_EVTEST				# joysticks tester
@@ -695,7 +695,7 @@ config BR2_PACKAGE_BATOCERA_TOOLS
 
 #### systems ####
 config BR2_PACKAGE_BATOCERA_ALL_SYSTEMS
-	bool "batocera.linux all emulators packages selection"
+	bool "ProjectArcade OS all emulators packages selection"
 
 	# RetroArch frontend and core data
 	select BR2_PACKAGE_BATOCERA_RETROARCH
@@ -716,11 +716,11 @@ config BR2_PACKAGE_BATOCERA_ALL_SYSTEMS
 	select BR2_PACKAGE_BATOCERA_STEAM if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
 
 	help
-	  batocera.linux all supported emulation systems
+	  ProjectArcade OS all supported emulation systems
 
 #### Wine Layer ####
 config BR2_PACKAGE_BATOCERA_WINE_SYSTEMS
-	bool "batocera.linux Wine support"
+	bool "ProjectArcade OS Wine support"
 
 	# Wine (windows) layer
 	select BR2_PACKAGE_BATOCERA_WINE	if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
@@ -728,7 +728,7 @@ config BR2_PACKAGE_BATOCERA_WINE_SYSTEMS
 
 #### Flash Player ####
 config BR2_PACKAGE_BATOCERA_FLASH_SYSTEMS
-	bool "batocera.linux Flash support"
+	bool "ProjectArcade OS Flash support"
 
 	# Flash Player Emulator
 	select BR2_PACKAGE_RUFFLE		if BR2_PACKAGE_XORG7 && BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY # need to be configured to support crosscompilation
@@ -736,14 +736,14 @@ config BR2_PACKAGE_BATOCERA_FLASH_SYSTEMS
 
 #### Moonlight / Gamestream ####
 config BR2_PACKAGE_BATOCERA_GAMESTREAM_SYSTEMS
-	bool "batocera.linux game streaming support"
+	bool "ProjectArcade OS game streaming support"
 
 	# Game streaming
 	select BR2_PACKAGE_MOONLIGHT_EMBEDDED	if !BR2_PACKAGE_BATOCERA_TARGET_RK3128 && !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
 
 #### ScummVM ####
 config BR2_PACKAGE_BATOCERA_SCUMMVM_SYSTEMS
-	bool "batocera.linux ScummVM emulators/cores"
+	bool "ProjectArcade OS ScummVM emulators/cores"
 
 	# ScummVM
 	select BR2_PACKAGE_SCUMMVM		# ALL
@@ -751,7 +751,7 @@ config BR2_PACKAGE_BATOCERA_SCUMMVM_SYSTEMS
 
 #### Homebrew ####
 config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
-	bool "batocera.linux homebrew systems"
+	bool "ProjectArcade OS homebrew systems"
 
 	# OpenBOR
 	select BR2_PACKAGE_OPENBOR4432		# ALL
@@ -795,7 +795,7 @@ config BR2_PACKAGE_BATOCERA_HOMEBREW_SYSTEMS
 
 #### Sega Dreamcast, Naomi and Atomiswave ####
 config BR2_PACKAGE_BATOCERA_SEGADC
-	bool "batocera.linux dreamcast/naomi/atomiswave emulators/cores"
+	bool "ProjectArcade OS dreamcast/naomi/atomiswave emulators/cores"
 
 	# Dreamcast / Naomi / Atomiswave emulation
 	select BR2_PACKAGE_FLYCAST		if !BR2_riscv					&& \
@@ -833,7 +833,7 @@ config BR2_PACKAGE_BATOCERA_SEGADC
 
 #### Arcade cores ####
 config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
-	bool "batocera.linux arcade emulators packages selection"
+	bool "ProjectArcade OS arcade emulators packages selection"
 
 	# Final Burn Alpha
 	select BR2_PACKAGE_LIBRETRO_FBALPHA	if BR2_PACKAGE_BATOCERA_TARGET_BCM2835
@@ -873,7 +873,7 @@ config BR2_PACKAGE_BATOCERA_ARCADE_SYSTEMS
 
 #### Handheld consoles ####
 config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
-	bool "batocera.linux handheld emulation packages"
+	bool "ProjectArcade OS handheld emulation packages"
 
 	# Gameboy / Gameboy Color
 	select BR2_PACKAGE_LIBRETRO_GAMBATTE		# ALL
@@ -954,7 +954,7 @@ config BR2_PACKAGE_BATOCERA_HANDHELD_SYSTEMS
 
 #### MSDOS emulation ####
 config BR2_PACKAGE_BATOCERA_MSDOS_SYSTEMS
-	bool "batocera.linux MS/DOS emulation packages"
+	bool "ProjectArcade OS MS/DOS emulation packages"
 
 	select BR2_PACKAGE_DOSBOX				if  BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY # || BR2_PACKAGE_BATOCERA_TARGET_BCM2711 # Need libGLEW
 
@@ -974,7 +974,7 @@ config BR2_PACKAGE_BATOCERA_MSDOS_SYSTEMS
 
 #### Linux / Libretro ports ####
 config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
-	bool "batocera.linux ports packages"
+	bool "ProjectArcade OS ports packages"
 
 	# DevilutionX (Diablo 1)
 	select BR2_PACKAGE_DEVILUTIONX			if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835
@@ -1125,7 +1125,7 @@ config BR2_PACKAGE_BATOCERA_PORTS_SYSTEMS
 
 #### Vintage computer systems ####
 config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
-	bool "batocera.linux vintage computers emulation packages"
+	bool "ProjectArcade OS vintage computers emulation packages"
 
 	# CAPS image support (IPF)
 	select BR2_PACKAGE_LIBCAPSIMAGE		# ALL
@@ -1193,7 +1193,7 @@ config BR2_PACKAGE_BATOCERA_COMPUTER_SYSTEMS
 	  Old computers
 
 config BR2_PACKAGE_BATOCERA_RETROARCH
-	bool "batocera.linux RetroArch frontend and integration"
+	bool "ProjectArcade OS RetroArch frontend and integration"
 
 	# RetroArch frontend and core data
 	select BR2_PACKAGE_RETROARCH
@@ -1202,7 +1202,7 @@ config BR2_PACKAGE_BATOCERA_RETROARCH
 	select BR2_PACKAGE_BATOCERA_SHADERS
 
 config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
-	bool "batocera.linux console emulators/cores"
+	bool "ProjectArcade OS console emulators/cores"
 
 	# Nintendo 64
 	select BR2_PACKAGE_BATOCERA_MUPEN64		if !BR2_PACKAGE_BATOCERA_TARGET_BCM2835 # mupen64 (n64) runs too slow on these platforms
@@ -1446,7 +1446,7 @@ config BR2_PACKAGE_BATOCERA_CONSOLE_SYSTEMS
 
 ### Dhewm3 port & mods
 config BR2_PACKAGE_BATOCERA_DHEWM3
-	bool "batocera.linux Dhewm3 packages selection"
+	bool "ProjectArcade OS Dhewm3 packages selection"
 
 	select BR2_PACKAGE_DHEWM3
 	# Mods
@@ -1468,7 +1468,7 @@ config BR2_PACKAGE_BATOCERA_DHEWM3
 	  Dhewm3
 
 config BR2_PACKAGE_BATOCERA_MUPEN64
-	bool "batocera.linux Mupen64 packages selection"
+	bool "ProjectArcade OS Mupen64 packages selection"
 
 	# Core module
 	select BR2_PACKAGE_MUPEN64PLUS_CORE
@@ -1577,7 +1577,7 @@ config BR2_PACKAGE_BATOCERA_GUNS
 	select BR2_PACKAGE_XGUNNER_LIGHTGUNS                    # XGunner light gun
 
 config BR2_PACKAGE_BATOCERA_KODI21
-	bool "batocera.linux Kodi 21 packages selection"
+	bool "ProjectArcade OS Kodi 21 packages selection"
 	default n
 	select BR2_PACKAGE_KODI				# kodi
 	select BR2_PACKAGE_PYTHON_PYOPENSSL		# used by some kodi plugins
@@ -1722,7 +1722,7 @@ config BR2_PACKAGE_BATOCERA_KODI21
 					   BR2_PACKAGE_BATOCERA_TARGET_SM8250
 
 config BR2_PACKAGE_BATOCERA_WPA
-	bool "batocera.linux WPA supplicant"
+	bool "ProjectArcade OS WPA supplicant"
 
 	select BR2_PACKAGE_WPA_SUPPLICANT				if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wifi
 	select BR2_PACKAGE_WPA_SUPPLICANT_CLI				if !BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 # wifi
@@ -1743,7 +1743,7 @@ config BR2_PACKAGE_BATOCERA_WPA
 
 
 config BR2_PACKAGE_BATOCERA_QT6
-	bool "batocera.linux Qt6 stack"
+	bool "ProjectArcade OS Qt6 stack"
 
 	select BR2_PACKAGE_QT6
 	select BR2_PACKAGE_QT6_VERSION_LATEST
@@ -1780,13 +1780,13 @@ config BR2_PACKAGE_BATOCERA_QT6
 	select BR2_PACKAGE_QT6WEBSOCKETS
 
 config BR2_PACKAGE_BATOCERA_RPI_VCORE
-	bool "batocera.linux support vcore RPI"
+	bool "ProjectArcade OS support vcore RPI"
 
 	select BR2_PACKAGE_RPI_USERLAND
 	select BR2_PACKAGE_RASPI2PNG # screenshots
 
 config BR2_PACKAGE_BATOCERA_RPI_MESA3D
-	bool "batocera.linux driver mesa RPI"
+	bool "ProjectArcade OS driver mesa RPI"
 
 	select BR2_PACKAGE_MESA3D
 	select BR2_PACKAGE_MESA3D_OPENGL_ES
@@ -1799,7 +1799,7 @@ config BR2_PACKAGE_BATOCERA_RPI_MESA3D
 
 
 config BR2_PACKAGE_BATOCERA_LIMA_MESA3D
-	bool "batocera.linux driver mesa LIMA"
+	bool "ProjectArcade OS driver mesa LIMA"
 
 	select BR2_PACKAGE_MESA3D
 	select BR2_PACKAGE_MESA3D_OPENGL_ES
@@ -1807,7 +1807,7 @@ config BR2_PACKAGE_BATOCERA_LIMA_MESA3D
 	select BR2_PACKAGE_MESA3D_GALLIUM_DRIVER_LIMA
 
 config BR2_PACKAGE_BATOCERA_PANFROST_MESA3D
-	bool "batocera.linux driver mesa PANFROST"
+	bool "ProjectArcade OS driver mesa PANFROST"
 
 	select BR2_PACKAGE_MESA3D
 	select BR2_PACKAGE_MESA3D_OPENGL_ES
@@ -1818,12 +1818,12 @@ config BR2_PACKAGE_BATOCERA_PANFROST_MESA3D
 	select BR2_PACKAGE_LIBGLVND			    if BR2_PACKAGE_XORG7 # opengl vendor neutral dispatch
 
 config BR2_PACKAGE_BATOCERA_MALI_G610
-	bool "batocera.linux driver mesa MALI"
+	bool "ProjectArcade OS driver mesa MALI"
 
 	select BR2_PACKAGE_MALI_G610
 
 config BR2_PACKAGE_BATOCERA_FREEDRENO_MESA3D
-	bool "batocera.linux driver mesa FREEDRENO"
+	bool "ProjectArcade OS driver mesa FREEDRENO"
 
 	select BR2_PACKAGE_MESA3D
 	select BR2_PACKAGE_MESA3D_OPENGL_ES
@@ -1834,7 +1834,7 @@ config BR2_PACKAGE_BATOCERA_FREEDRENO_MESA3D
 	select BR2_PACKAGE_LIBGLVND			    if BR2_PACKAGE_XORG7 # opengl vendor neutral dispatch
 
 config BR2_PACKAGE_BATOCERA_LINUX_FIRMWARES
-	bool "batocera.linux Firmwares packages selection"
+	bool "ProjectArcade OS Firmwares packages selection"
 
 	# alllinuxfirmwares
 	select BR2_PACKAGE_ALLLINUXFIRMWARES		if !BR2_PACKAGE_BATOCERA_TARGET_H616
@@ -1898,7 +1898,7 @@ config BR2_PACKAGE_BATOCERA_SDL2
 	select BR2_PACKAGE_LIBVORBIS		# ogg
 
 config BR2_PACKAGE_BATOCERA_WAYLAND
-	bool "batocera.linux wayland packages selection"
+	bool "ProjectArcade OS wayland packages selection"
 
 	# Wayland Protocol
 	select BR2_PACKAGE_WAYLAND
@@ -1906,7 +1906,7 @@ config BR2_PACKAGE_BATOCERA_WAYLAND
 	select BR2_PACKAGE_WAYLAND_PROTOCOLS
 
 config BR2_PACKAGE_BATOCERA_WAYLAND_SWAY
-	bool "batocera.linux wayland sway packages selection"
+	bool "ProjectArcade OS wayland sway packages selection"
 
 	# Wayland Protocol
 	select BR2_PACKAGE_BATOCERA_WAYLAND
@@ -1920,7 +1920,7 @@ config BR2_PACKAGE_BATOCERA_WAYLAND_SWAY
 	select BR2_PACKAGE_SWAYBG
 
 config BR2_PACKAGE_BATOCERA_XWAYLAND
-	bool "batocera.linux xwayland packages selection"
+	bool "ProjectArcade OS xwayland packages selection"
 
 	# Xorg emulation layer of Wayland
 	select BR2_PACKAGE_XORG7
@@ -1939,7 +1939,7 @@ config BR2_PACKAGE_BATOCERA_XWAYLAND
 	select BR2_PACKAGE_XLIB_LIBXFT			# font size for xterm
 
 config BR2_PACKAGE_BATOCERA_XORG
-	bool "batocera.linux xorgs packages selection"
+	bool "ProjectArcade OS xorgs packages selection"
 
 	select BR2_PACKAGE_XORG7
 	select BR2_PACKAGE_XSERVER_XORG_SERVER
@@ -1985,7 +1985,7 @@ config BR2_PACKAGE_BATOCERA_XORG
 	select BR2_PACKAGE_TOUCHEGG			# touchscreen extended gestures
 
 config BR2_PACKAGE_BATOCERA_GPU_X86
-	bool "batocera.linux GPU support for x86 platform"
+	bool "ProjectArcade OS GPU support for x86 platform"
 
 	# nvidia
 	select BR2_PACKAGE_BATOCERA_NVIDIA			if BR2_PACKAGE_BATOCERA_TARGET_X86_64_ANY
@@ -2027,7 +2027,7 @@ config BR2_PACKAGE_BATOCERA_GPU_X86
 	select BR2_PACKAGE_VDPAUINFO				if BR2_PACKAGE_BATOCERA_TARGET_X86_ANY
 
 config BR2_PACKAGE_BATOCERA_VIDEO_CODECS
-	bool "batocera.linux video codecs"
+	bool "ProjectArcade OS video codecs"
 
 	# Video 4 Linux
 	select BR2_PACKAGE_LIBV4L

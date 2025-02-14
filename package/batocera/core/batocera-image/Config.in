@@ -3,4 +3,4 @@ config BR2_PACKAGE_BATOCERA_IMAGE
 	select BR2_PACKAGE_HOST_GENIMAGE
 	select BR2_PACKAGE_HOST_GENEXT2FS
 	help
-	  Utilities needed to build Batocera.linux images
+	  Utilities needed to build ProjectArcade OS images

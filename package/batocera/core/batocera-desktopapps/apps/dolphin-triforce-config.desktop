@@ -4,5 +4,5 @@ Icon=/usr/share/icons/batocera/dolphin-triforce.png
 Exec=/usr/bin/batocera-config-dolphin-triforce
 Terminal=false
 Type=Application
-Categories=Game;batocera.linux;
+Categories=Game;ProjectArcade;
 Name=dolphin-triforce-config
